@@ -13,6 +13,7 @@ export default function Header() {
                             width={150}
                             height={150}
                             className="rounded-3xl aspect-square object-cover"
+                            sizes="(max-width: 768px) 50vw, 150px"
                         />
                     </div>
 
@@ -32,6 +33,7 @@ export default function Header() {
                             width={150}
                             height={150}
                             className="rounded-full aspect-square object-cover"
+                            sizes="(max-width: 768px) 50vw, 150px"
                         />
                     </div>
                 </div>
