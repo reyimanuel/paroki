@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
     return (
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
@@ -9,6 +11,19 @@ export default function Hero() {
                     Melayani umat Katolik dengan kasih dan dedikasi, membangun komunitas yang beriman,
                     berharap, dan berkarya dalam semangat Injil Kristus.
                 </p>
+                <div className="flex justify-center mb-8">
+                    <div className="w-40 h-40 relative">
+                        <Image
+                            src="/hero.jpg"
+                            alt="Gereja Paroki Bunda Teresa"
+                            layout="fill"
+                            objectFit="cover"
+                            className="rounded-full shadow-lg"
+                            sizes="(max-width: 768px) 50vw, 150px"
+                            priority
+                        />
+                    </div>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button className="bg-blue-800 text-white px-8 py-3 rounded-lg hover:bg-blue-900 transition-colors font-medium">
                         Jadwal Misa

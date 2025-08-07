@@ -3,6 +3,7 @@ import Hero from './components/hero'
 import Footer from './components/footer'
 import Gallery from './components/gallery'
 import Event from './components/event'
+import Map from './components/map'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <Gallery />
 
         <Event />
+
+        <Map />
       </main>
 
       <Footer />

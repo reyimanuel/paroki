@@ -1,24 +1,28 @@
 import Header from '@/app/components/header'
 import Footer from '@/app/components/footer'
+import Image from 'next/image'
 
 export default function SejarahPage() {
     const pastorList = [
         {
             name: "Pastor Piet Petrus Tinangon Pr.",
             period: "21 Februari 2021 – 12 Mei 2024",
-            status: "Pastor Paroki Pertama"
+            status: "Pastor Paroki Pertama",
+            image: "/piet-tinangon.jpg"
         },
         {
             name: "Pastor Johanes Josep Montolalu Pr.",
             period: "12 Mei 2024 – 25 Agustus 2024",
             status: "Pelaksana Tugas",
-            sk: "SK Uskup Keuskupan Manado nomor 29/U/SK/V/2024 tanggal 12 Mei 2024"
+            sk: "SK Uskup Keuskupan Manado nomor 29/U/SK/V/2024 tanggal 12 Mei 2024",
+            image: "/johanes-montolalu.png" 
         },
         {
             name: "Pastor Fransiscus Antonio Runtu Pr.",
             period: "25 Agustus 2024 – sekarang",
             status: "Pastor Paroki",
-            sk: "SK Uskup Keuskupan Manado nomor 80/U/SK/8/2024 tanggal 12 Agustus 2024"
+            sk: "SK Uskup Keuskupan Manado nomor 80/U/SK/8/2024 tanggal 12 Agustus 2024",
+            image: "/fransiscus-runtu.png"
         }
     ]
 
@@ -203,10 +207,20 @@ export default function SejarahPage() {
                                 {pastorList.map((pastor, index) => (
                                     <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                                            <div>
-                                                <h3 className="text-lg font-bold text-gray-800">{pastor.name}</h3>
-                                                <p className="text-blue-600 font-medium">{pastor.status}</p>
-                                                <p className="text-gray-600">{pastor.period}</p>
+                                            <div className="flex items-center mb-4 md:mb-0">
+                                                <Image
+                                                    src={pastor.image || "/placeholder.svg"}
+                                                    alt={pastor.name}
+                                                    width={80}
+                                                    height={80}
+                                                    sizes="(max-width: 768px) 50vw, 150px"
+                                                    className="rounded-full object-cover mr-4"
+                                                />
+                                                <div>
+                                                    <h3 className="text-lg font-bold text-gray-800">{pastor.name}</h3>
+                                                    <p className="text-blue-600 font-medium">{pastor.status}</p>
+                                                    <p className="text-gray-600">{pastor.period}</p>
+                                                </div>
                                             </div>
                                             {pastor.sk && (
                                                 <div className="mt-2 md:mt-0">
@@ -316,7 +330,14 @@ export default function SejarahPage() {
                         <div className="bg-blue-50 p-6 rounded-lg">
                             <h3 className="text-xl font-bold text-blue-800 mb-4">Pastor Saat Ini</h3>
                             <div className="text-center">
-                                <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-3"></div>
+                                <Image
+                                    src="/fransiscus-runtu.png"
+                                    alt="Pastor Fransiscus Antonio Runtu Pr."
+                                    width={80}
+                                    height={80}
+                                    sizes="(max-width: 768px) 50vw, 80px"
+                                    className="rounded-full object-cover mx-auto mb-3"
+                                />
                                 <h4 className="font-semibold text-gray-700">Pastor Fransiscus Antonio Runtu Pr.</h4>
                                 <p className="text-sm text-gray-600">Pastor Paroki</p>
                                 <p className="text-xs text-gray-500 mt-2">25 Agustus 2024 - sekarang</p>
