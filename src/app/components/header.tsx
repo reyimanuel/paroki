@@ -4,15 +4,14 @@ import Navigation from './navigation'
 export default function Header() {
     return (
         <header className="bg-white shadow-sm">
-            <div className="container mx-auto px-30 py-6">
+            <div className="container mx-auto px-30 py-1">
                 <div className="flex items-center justify-between mb-6">
                     <div className="rounded-full flex items-center justify-center">
                         <Image
                             src="/logo.png"
                             alt="Logo Keuskupan Surabaya"
-                            width={150}
-                            height={150}
-                            className="rounded-3xl aspect-square object-cover"
+                            width={100}
+                            height={100}
                             sizes="(max-width: 768px) 50vw, 150px"
                         />
                     </div>
@@ -30,8 +29,8 @@ export default function Header() {
                         <Image
                             src="/logo2.jpg"
                             alt="Logo Pastoral"
-                            width={150}
-                            height={150}
+                            width={100}
+                            height={100}
                             className="rounded-full aspect-square object-cover"
                             sizes="(max-width: 768px) 50vw, 150px"
                         />
