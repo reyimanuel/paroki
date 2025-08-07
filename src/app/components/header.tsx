@@ -4,11 +4,11 @@ import Navigation from './navigation'
 export default function Header() {
     return (
         <header className="bg-white shadow-sm">
-            <div className="container mx-auto px-10 py-6">
+            <div className="container mx-auto px-30 py-6">
                 <div className="flex items-center justify-between mb-6">
                     <div className="rounded-full flex items-center justify-center">
                         <Image
-                            src="/logo.jpg"
+                            src="/logo.png"
                             alt="Logo Keuskupan Surabaya"
                             width={150}
                             height={150}

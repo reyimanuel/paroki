@@ -17,7 +17,7 @@ export default function Footer() {
                         <div className="space-y-2">
                             <div className="flex items-center">
                                 <MapPin className="h-4 w-4 mr-2" />
-                                <span className="text-sm text-gray-300">Jl. Rambutan, Griya Paniki Indah</span>
+                                <span className="text-sm text-gray-300">Jl. Dahlia Raya III No.9, Paniki Bawah, Kec. Mapanget, Kota Manado, Sulawesi Utara</span>
                             </div>
                             <div className="flex items-center">
                                 <Phone className="h-4 w-4 mr-2" />
@@ -25,7 +25,7 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center">
                                 <Mail className="h-4 w-4 mr-2" />
-                                <span className="text-sm text-gray-300">info@example.org</span>
+                                <span className="text-sm text-gray-300">paroki.bundateresagpi@gmail.com</span>
                             </div>
                         </div>
                     </div>
