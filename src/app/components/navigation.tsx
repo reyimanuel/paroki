@@ -11,45 +11,45 @@ export default function Navigation() {
         { name: 'BERANDA', href: '/' },
         {
             name: 'PROFIL',
-            href: '/profil',
+            href: '/progress',
             submenu: [
-                { name: 'Sejarah', href: '/profil/sejarah' },
-                { name: 'Visi & Misi', href: '/profil/visi-misi' },
-                { name: 'Struktur Organisasi', href: '/profil/struktur' }
+                { name: 'Sejarah', href: '/progress' },
+                { name: 'Visi & Misi', href: '/progress' },
+                { name: 'Struktur Organisasi', href: '/progress' }
             ]
         },
         {
             name: 'ARAH DASAR PASTORAL',
-            href: '/arah-dasar-pastoral',
+            href: '/progress',
             submenu: [
-                { name: 'Program Pastoral', href: '/arah-dasar-pastoral/program' },
-                { name: 'Kegiatan Rutin', href: '/arah-dasar-pastoral/kegiatan' }
+                { name: 'Program Pastoral', href: '/progress' },
+                { name: 'Kegiatan Rutin', href: '/progress' }
             ]
         },
         {
             name: 'KARYA PASTORAL',
-            href: '/karya-pastoral',
+            href: '/progress',
             submenu: [
-                { name: 'Pendidikan', href: '/karya-pastoral/pendidikan' },
-                { name: 'Kesehatan', href: '/karya-pastoral/kesehatan' },
-                { name: 'Sosial', href: '/karya-pastoral/sosial' }
+                { name: 'Pendidikan', href: '/progress' },
+                { name: 'Kesehatan', href: '/progress' },
+                { name: 'Sosial', href: '/progress' }
             ]
         },
         {
             name: 'INFORMASI',
-            href: '/informasi',
+            href: '/progress',
             submenu: [
-                { name: 'Berita', href: '/informasi/berita' },
-                { name: 'Pengumuman', href: '/informasi/pengumuman' },
-                { name: 'Agenda', href: '/informasi/agenda' }
+                { name: 'Berita', href: '/progress' },
+                { name: 'Pengumuman', href: '/progress' },
+                { name: 'Agenda', href: '/progress' }
             ]
         },
         {
             name: 'DOKUMEN',
-            href: '/dokumen',
+            href: '/progress',
             submenu: [
-                { name: 'Surat Pastoral', href: '/dokumen/surat-pastoral' },
-                { name: 'Peraturan', href: '/dokumen/peraturan' }
+                { name: 'Surat Pastoral', href: '/progress' },
+                { name: 'Peraturan', href: '/progress' }
             ]
         }
     ]

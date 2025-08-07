@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Gallery() {
-    const event = [
+    const gallery = [
         {
             id: 1,
             name: "acara sample",
@@ -26,16 +26,16 @@ export default function Gallery() {
     return (
         <section className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-                Gereja Paroki Bunda Teresa Dari Calcutta
+                Gallery
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {event.map((parish: { id: number, name: string; image: string; description: string }) => (
-                    <div key={parish.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 flex flex-col">
+                {gallery.map((items: { id: number, name: string; image: string; description: string }) => (
+                    <div key={items.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 flex flex-col">
                         <div className="p-0">
                             <div className="relative h-48 w-full">
                                 <Image
-                                    src={parish.image || "/sample.jpg"}
-                                    alt={parish.name}
+                                    src={items.image || "/sample.jpg"}
+                                    alt={items.name}
                                     fill
                                     sizes="100vw"
                                     style={{ objectFit: 'cover' }}
@@ -44,10 +44,10 @@ export default function Gallery() {
                             </div>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-xl font-bold text-gray-800 mb-3">{parish.name}</h3>
-                            <p className="text-gray-600 mb-4">{parish.description}</p>
+                            <h3 className="text-xl font-bold text-gray-800 mb-3">{items.name}</h3>
+                            <p className="text-gray-600 mb-4">{items.description}</p>
                             <Link
-                                href={`/paroki/${parish.name.toLowerCase().replace(/\s+/g, '-').replace(/,/g, '')}`}
+                                href={`/paroki/${items.name.toLowerCase().replace(/\s+/g, '-').replace(/,/g, '')}`}
                                 className="text-blue-800 hover:text-blue-900 font-medium transition-colors mt-auto"
                             >
                                 Selengkapnya →
