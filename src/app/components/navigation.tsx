@@ -9,7 +9,7 @@ export default function Navigation() {
     const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
 
     const menuItems = [
-        { name: 'BERANDA', href: '/' },
+        { name: 'BERANDA', href: '/main' },
         {
             name: 'PROFIL',
             submenu: [

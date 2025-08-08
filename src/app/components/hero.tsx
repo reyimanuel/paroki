@@ -15,9 +15,9 @@ export default function Hero() {
                         berharap, dan berkarya dalam semangat Injil Kristus.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-blue-800 text-white px-8 py-3 rounded-lg hover:bg-blue-900 transition-colors font-medium">
+                        {/* <button className="bg-blue-800 text-white px-8 py-3 rounded-lg hover:bg-blue-900 transition-colors font-medium">
                             Jadwal Misa
-                        </button>
+                        </button> */}
                         <button className="bg-blue-800 text-white px-8 py-3 rounded-lg hover:bg-blue-900 transition-colors font-medium">
                             Hubungi Kami
                         </button>
