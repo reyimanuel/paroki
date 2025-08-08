@@ -1,4 +1,4 @@
-import { MapPin, CalendarDays, Clock } from 'lucide-react'
+import {CalendarDays, Clock } from 'lucide-react'
 
 export default function Schedule() {
     return (
@@ -8,13 +8,13 @@ export default function Schedule() {
                     <h2 className="text-3xl font-bold text-blue-800 mb-4">
                         Jadwal Perayaan Ekaristi
                     </h2>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                    {/* <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                         Gereja Katolik Bunda Teresa - Calcutta Griya Paniki Indah
                     </p>
                     <p className="text-md text-gray-600 mt-2 flex items-center justify-center">
                         <MapPin className="h-5 w-5 mr-2 text-blue-600" />
                         Jl. Dahlia Raya 03 No. 9, Kelurahan Buha, Kecamatan Mapanget, Manado - Sulawesi Utara
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
