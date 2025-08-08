@@ -38,7 +38,7 @@ export default function Navigation() {
             submenu: [
                 { name: 'Berita', href: 'progress' },
                 { name: 'Pengumuman', href: 'progress' },
-                { name: 'Agenda', href: 'progress' }
+                { name: 'Agenda', href: 'progress' },
             ]
         },
         {

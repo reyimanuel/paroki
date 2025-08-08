@@ -2,8 +2,8 @@ import Header from '@/app/components/header'
 import Footer from '@/app/components/footer'
 import Image from 'next/image'
 
-export default function SejarahPage() {
-    const pastorList = [
+export default function History() {
+    const pastor = [
         {
             name: "Pastor Piet Petrus Tinangon Pr.",
             period: "21 Februari 2021 – 12 Mei 2024",
@@ -204,7 +204,7 @@ export default function SejarahPage() {
                         <section className="mb-12">
                             <h2 className="text-3xl font-bold text-blue-800 mb-6">Daftar Pastor Paroki</h2>
                             <div className="space-y-4">
-                                {pastorList.map((pastor, index) => (
+                                {pastor.map((pastor, index) => (
                                     <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                                             <div className="flex items-center mb-4 md:mb-0">
@@ -306,7 +306,7 @@ export default function SejarahPage() {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Jumlah Stasi</h4>
-                                    <p className="text-sm text-gray-600">3 Stasi</p>
+                                    <p className="text-sm text-gray-600">2 Stasi</p>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Wilayah Rohani</h4>
