@@ -8,6 +8,7 @@ export default function History() {
             name: "Pastor Piet Petrus Tinangon Pr.",
             period: "21 Februari 2021 – 12 Mei 2024",
             status: "Pastor Paroki Pertama",
+            sk: "SK Uskup Keuskupan Manado nomor 17/U/SK/II/2021 tanggal 21 Februari 2021",
             image: "/piet-tinangon.jpg"
         },
         {
