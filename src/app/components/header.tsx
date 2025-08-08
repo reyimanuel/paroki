@@ -18,7 +18,7 @@ export default function Header() {
 
                     <div className="text-center flex-1">
                         <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-2">
-                            Gereja Paroki Bunda Teresa Dari Calcutta
+                            KEUSKUPAN MANADO <br /> PAROKI BUNDA TERESA DARI CALCUTTA
                         </h1>
                         <p className="text-gray-600 italic text-sm md:text-base">
                             Griya Paniki Indah

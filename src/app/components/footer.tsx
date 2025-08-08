@@ -31,15 +31,19 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-lg font-semibold mb-4">Jadwal Misa</h4>
+                        <h4 className="text-lg font-semibold mb-4">Jadwal Perayaan Ekaristi</h4>
                         <div className="space-y-2">
                             <div className="flex items-center">
                                 <Clock className="h-4 w-4 mr-2" />
-                                <span className="text-sm text-gray-300">Minggu: 06.00, 08.00, 17.00</span>
+                                <span className="text-sm text-gray-300">Minggu: 07.00, 09.00, 11.00, 18.00</span>
                             </div>
                             <div className="flex items-center">
                                 <Clock className="h-4 w-4 mr-2" />
-                                <span className="text-sm text-gray-300">Harian: 06.00, 18.00</span>
+                                <span className="text-sm text-gray-300">Jumat Pertama: 18.00</span>
+                            </div>
+                            <div className="flex items-center">
+                                <Clock className="h-4 w-4 mr-2" />
+                                <span className="text-sm text-gray-300">Harian: 05.30</span>
                             </div>
                         </div>
                     </div>

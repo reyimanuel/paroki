@@ -28,7 +28,7 @@ export default function LandingPage() {
             className="mx-auto mb-4 rounded-full shadow-lg"
           />
           <h1 className="text-5xl font-extrabold text-white mb-4 leading-tight drop-shadow-lg">
-            Selamat Datang di <br /> Keuskupan Manado
+            Selamat Datang di <br /> Paroki Bunda Teresa
           </h1>
           <p className="text-xl text-gray-200 drop-shadow-md">
             Melayani umat dengan kasih dan dedikasi, membangun komunitas yang beriman dan berkarya.
