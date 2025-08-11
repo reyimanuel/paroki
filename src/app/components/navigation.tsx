@@ -36,7 +36,7 @@ export default function Navigation() {
         {
             name: 'INFORMASI',
             submenu: [
-                { name: 'Berita', href: 'progress' },
+                { name: 'Berita', href: 'news' },
                 { name: 'Pengumuman', href: 'progress' },
                 { name: 'Agenda', href: 'progress' },
             ]
