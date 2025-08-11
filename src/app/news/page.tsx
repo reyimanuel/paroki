@@ -1,14 +1,14 @@
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Image from "next/image"
+import Image from "next/image" // Re-import Image component
 
 type Post = {
     title: string
     link: string
     published: string
     summary: string
-    thumbnail: string
-    intrinsicWidth?: number
+    thumbnail: string // Re-add thumbnail
+    intrinsicWidth?: number // Re-add intrinsic dimensions
     intrinsicHeight?: number
 }
 
@@ -42,6 +42,7 @@ export default async function BeritaPage() {
                 let intrinsicWidth: number | undefined
                 let intrinsicHeight: number | undefined
 
+                // Prioritize gd$image if it exists and has a src
                 if (entry["gd$image"] && entry["gd$image"].src) {
                     thumbnail = entry["gd$image"].src.startsWith("//") ? `https:${entry["gd$image"].src}` : entry["gd$image"].src
                     intrinsicWidth = Number.parseInt(entry["gd$image"].width) || undefined
@@ -75,43 +76,22 @@ export default async function BeritaPage() {
 
             <main className="container mx-auto px-4 py-12">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-4">Berita Paroki Bunda Teresa dari Calcutta</h1>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-4">Berita - Berita Paroki</h1>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                         Ikuti perkembangan terkini kegiatan dan program-program paroki langsung dari blog kami.
                     </p>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="space-y-6 max-w-3xl mx-auto">
                     {posts.length > 0 ? (
                         posts.map((post, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 flex flex-col" // Added flex-col
+                                className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 p-6 flex items-start gap-4" // Added flex and gap
                             >
-                                {post.thumbnail && (
-                                    <a href={post.link} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-                                        {" "}
-                                        {/* Added flex-shrink-0 */}
-                                        <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
-                                            {" "}
-                                            {/* Container for image */}
-                                            <Image
-                                                src={post.thumbnail || "/placeholder.svg"}
-                                                alt={post.title}
-                                                // Use intrinsic dimensions if available, otherwise provide a reasonable default
-                                                // For small thumbnails, it's better to let Next.js optimize for a target display size
-                                                // We'll set a fixed display size and let Next.js handle the scaling.
-                                                width={400} // Target width for optimization
-                                                height={250} // Target height for optimization
-                                                className="w-full h-full object-cover" // Ensure it covers the container
-                                                priority={idx < 3}
-                                            />
-                                        </div>
-                                    </a>
-                                )}
-                                <div className="p-6 flex-grow">
+                                <div className="flex-grow">
                                     {" "}
-                                    {/* Added flex-grow */}
+                                    {/* Content on the left */}
                                     <h2 className="text-xl font-semibold text-gray-800 mb-2">
                                         <a
                                             href={post.link}
@@ -139,6 +119,20 @@ export default async function BeritaPage() {
                                         Baca selengkapnya →
                                     </a>
                                 </div>
+                                {post.thumbnail && (
+                                    <a href={post.link} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+                                        {" "}
+                                        {/* Thumbnail on the right */}
+                                        <Image
+                                            src={post.thumbnail || "/placeholder.svg"}
+                                            alt={post.title}
+                                            width={96} // Fixed small width
+                                            height={96} // Fixed small height
+                                            className="rounded-md object-cover" // Ensure it covers the container
+                                            priority={idx < 3}
+                                        />
+                                    </a>
+                                )}
                             </div>
                         ))
                     ) : (
