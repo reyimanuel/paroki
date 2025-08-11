@@ -9,11 +9,13 @@ export default function Header() {
                     <div className="rounded-full flex items-center justify-center">
                         <Image
                             src="/logo.png"
-                            alt="Logo Keuskupan Surabaya"
+                            alt="Logo Pastoral"
                             width={100}
                             height={100}
+                            className="aspect-square object-cover"
                             sizes="(max-width: 768px) 50vw, 150px"
                         />
+
                     </div>
 
                     <div className="text-center flex-1">
