@@ -2,7 +2,7 @@ import {CalendarDays, Clock } from 'lucide-react'
 
 export default function Schedule() {
     return (
-        <section className="py-16 bg-blue-50 mb-16">
+        <section>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-blue-800 mb-4">

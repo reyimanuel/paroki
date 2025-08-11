@@ -13,13 +13,22 @@ export default function Home() {
             <Hero />
 
             <main className="container mx-auto px-4 py-12">
-                <Schedule />
+                <div className='py-16 bg-blue-50 mb-16'>
+                    <Schedule />
+                </div>
                 
-                {/* <Gallery /> */}
 
-                <News />
+                {/* <div className='py-16 mb-16'>
+                    <Gallery />
+                </div> */}
 
-                <Map />
+                <div className='py-16 mb-16'>
+                    <News />
+                </div>
+               
+                <div className='py-16 bg-blue-50 mb-16'>
+                    <Map />
+                </div>
             </main>
 
             <Footer />
