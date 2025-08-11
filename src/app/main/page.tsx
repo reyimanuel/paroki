@@ -1,8 +1,8 @@
 import Header from '../components/header'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
-import Gallery from '../components/gallery'
-import Event from '../components/event'
+// import Gallery from '../components/gallery'
+import News from '../components/news'
 import Map from '../components/map'
 import Schedule from '../components/schedule'
 
@@ -15,9 +15,9 @@ export default function Home() {
             <main className="container mx-auto px-4 py-12">
                 <Schedule />
                 
-                <Gallery />
+                {/* <Gallery /> */}
 
-                <Event />
+                <News />
 
                 <Map />
             </main>

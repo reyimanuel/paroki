@@ -12,7 +12,7 @@ type Post = {
     intrinsicHeight?: number
 }
 
-export default async function BeritaPage() {
+export default async function News() {
     const feedUrl = "https://teresacalcuttastagpi.blogspot.com/feeds/posts/default?alt=json"
 
     let posts: Post[] = []
