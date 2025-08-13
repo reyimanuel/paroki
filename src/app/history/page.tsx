@@ -28,35 +28,97 @@ export default function History() {
     ]
 
     const wilayahRohaniPusat = [
-        "WR Santo Ambrosius",
-        "WR Santo Thomas Becket",
-        "WR Santo Yohanes Rasul dan Penginjil",
-        "WR Santa Maria Ratu Rosari",
-        "WR Santa Elisabeth",
-        "WR Santa Ursula",
-        "WR Santo Fidelis Sigmaringen",
-        "WR Santo Athanasius",
-        "WR Santa Lidwina",
-        "WR Santo Valentinus",
-        "WR Santo Mikael",
-        "WR Santa Maria Ratu Pencinta Damai",
-        "WR Santa Verena",
-        "WR Santa Helena",
-        "WR Santo Padre Pio",
-        "WR Santo Lorenzo Ruiz"
+        {
+            name: "WR Santo Ambrosius",
+            image: "/wr/st-ambrosius.png"
+        },
+        {
+            name: "WR Santo Thomas Becket",
+            image: "/wr/st-thomas-becket.png"
+        },
+        {
+            name: "WR Santo Yohanes Rasul dan Penginjil",
+            image: "/wr/st-yohanes-rasul-&-penginjil.png"
+        },
+        {
+            name: "WR Santa Maria Ratu Rosario",
+            image: "/wr/santa-maria-ratu-rosario.png"
+        },
+        {
+            name: "WR Santa Elisabeth",
+            image: "/wr/st-elizabeth-dari-hungaria.png"
+        },
+        {
+            name: "WR Santa Ursula",
+            image: "/wr/santa-ursula.png"
+        },
+        {
+            name: "WR Santo Fidelis Sigmaringen",
+            image: "/wr/santo-fidelis-dari-sigmaringen.png"
+        },
+        {
+            name: "WR Santo Athanasius",
+            image: "/wr/st-athanasius.png"
+        },
+        {
+            name: "WR Santa Lidwina",
+            image: "/wr/st-lidwina.png"
+        },
+        {
+            name: "WR Santo Valentinus",
+            image: "/wr/santo-valentinus.png"
+        },
+        {
+            name: "WR Santo Mikael",
+            image: "/wr/santo-mikael.png"
+        },
+        {
+            name: "WR Santa Maria Ratu Pencinta Damai",
+            image: "/wr/santa-maria-ratu-rosario.png"
+        },
+        {
+            name: "WR Santa Verena",
+            image: "/wr/santa-verena.png"
+        },
+        {
+            name: "WR Santa Helena",
+            image: "/wr/santa-helena.png"
+        },
+        {
+            name: "WR Santo Padre Pio",
+            image: "/wr/santo-padre-pio.png"
+        },
+        {
+            name: "WR Santo Lorenzo Ruiz",
+            image: "/wr/santo-lorenzo-ruiz.png"
+        }
     ]
 
     const wilayahRohaniMapanget = [
-        "WR Santa Perpetua",
-        "WR Santa Angela Merici",
-        "WR Santo Antonius dari Padua"
+        { 
+            name: "WR Santa Perpetua", 
+            image: "/wr/st-perpetua.png" 
+        },
+        { 
+            name: "WR Santa Angela Merici", 
+            image: "/wr/st-angela-merici.png" 
+            },
+        { 
+            name: "WR Santo Antonius dari Padua", 
+            image: "/wr/st-antonius-dari-padua.png" 
+        }
     ]
 
     const wilayahRohaniKima = [
-        "WR Santo Yohanes Maria Vianney",
-        "WR Santo Paskalis Baylon"
+        { 
+            name: "WR Santo Yohanes Maria Vianey", 
+            image: "/wr/santo-yohanes-maria-vianey.png" 
+        },
+        { 
+            name: "WR Santo Paskalis Baylon", 
+            image: "/wr/paskalis-baylon.png" 
+        }
     ]
-
     const kelurahan = [
         "Kelurahan Paniki Bawah",
         "Kelurahan Buha",
@@ -237,41 +299,65 @@ export default function History() {
                         </section>
 
                         {/* Wilayah Rohani */}
-                        <section className="mb-12">
-                            <h2 className="text-3xl font-bold text-blue-800 mb-6">Struktur Wilayah Rohani</h2>
+                        <section className="mb-12 p-10 bg-blue-50 rounded-2xl">
+                            <h2 className="text-3xl font-bold text-blue-800 mb-6">Struktur Wilayah Rohani</h2> 
                             <div className="grid md:grid-cols-3 gap-6">
-                                <div className="bg-blue-50 p-6 rounded-lg">
-                                    <h3 className="text-lg font-bold text-blue-800 mb-4">
-                                        Pusat Paroki (16 WR)
-                                    </h3>
-                                    <ul className="text-sm text-gray-600 space-y-1">
+
+                                <div className="mb-8">
+                                    <h3 className="text-xl font-bold text-blue-800 mb-4 text-center">Pusat Paroki</h3>
+                                    <div className="space-y-3">
                                         {wilayahRohaniPusat.map((wr, index) => (
-                                            <li key={index}>• {wr}</li>
+                                            <div key={index} className="flex items-center gap-4 bg-blue-300 p-4 rounded-lg">
+                                                <Image
+                                                    src={wr.image || "/placeholder.svg"}
+                                                    alt={wr.name}
+                                                    width={48}
+                                                    height={48}
+                                                    className="rounded-full object-cover flex-shrink-0"
+                                                />
+                                                <span className="text-gray-700 font-medium">{wr.name}</span>
+                                            </div>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
 
-                                <div className="bg-indigo-50 p-6 rounded-lg">
-                                    <h3 className="text-lg font-bold text-indigo-800 mb-4">
-                                        Stasi Santo Petrus Mapanget Barat (3 WR)
-                                    </h3>
-                                    <ul className="text-sm text-gray-600 space-y-1">
+                                <div className="mb-8">
+                                    <h3 className="text-xl font-bold text-indigo-800 mb-4 text-center">Stasi Santo Petrus</h3>
+                                    <div className="space-y-3">
                                         {wilayahRohaniMapanget.map((wr, index) => (
-                                            <li key={index}>• {wr}</li>
+                                            <div key={index} className="flex items-center gap-4 bg-indigo-300 p-4 rounded-lg">
+                                                <Image
+                                                    src={wr.image || "/placeholder.svg"}
+                                                    alt={wr.name}
+                                                    width={48}
+                                                    height={48}
+                                                    className="rounded-full object-cover flex-shrink-0"
+                                                />
+                                                <span className="text-gray-700 font-medium">{wr.name}</span>
+                                            </div>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
 
-                                <div className="bg-cyan-50 p-6 rounded-lg">
-                                    <h3 className="text-lg font-bold text-cyan-800 mb-4">
-                                        Stasi Santo Carolus Boromeus Kima Atas (2 WR)
-                                    </h3>
-                                    <ul className="text-sm text-gray-600 space-y-1">
+
+                                <div className="mb-8">
+                                    <h3 className="text-xl font-bold text-cyan-800 mb-4 *:">Stasi Santo Carolus Boromeus</h3>
+                                    <div className="space-y-3">
                                         {wilayahRohaniKima.map((wr, index) => (
-                                            <li key={index}>• {wr}</li>
+                                            <div key={index} className="flex items-center gap-4 bg-cyan-300 p-4 rounded-lg">
+                                                <Image
+                                                    src={wr.image}
+                                                    alt={wr.name}
+                                                    width={48}
+                                                    height={48}
+                                                    className="rounded-full object-cover flex-shrink-0"
+                                                />
+                                                <span className="text-gray-700 font-medium">{wr.name}</span>
+                                            </div>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
+
                             </div>
                             <div className="mt-4 text-center">
                                 <p className="text-lg font-semibold text-gray-800">
