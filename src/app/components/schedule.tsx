@@ -17,7 +17,7 @@ export default function Schedule() {
                     <div className="relative z-10">
                         {/* Jadwal Pusat */}
                         <div className="text-center mb-8">
-                            <h3 className="text-2xl font-bold text-gray-800 mb-6">Jadwal Pusat</h3>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6">PUSAT PAROKI</h3>
                             <div className="grid md:grid-cols-3 gap-6">
                                 {/* Minggu Schedule */}
                                 <div className="bg-white/60 p-6 rounded-lg shadow-md">
@@ -79,7 +79,7 @@ export default function Schedule() {
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Stasi Santo Petrus Mapanget Barat */}
                             <div className="text-center">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4">Jadwal ST. Petrus</h3>
+                                <h3 className="text-xl font-bold text-gray-800 mb-4">STASI ST. PETRUS</h3>
                                 
                                 <div className="bg-white/60 p-6 rounded-lg shadow-md">
                                     <div className="flex items-center justify-center mb-4">
@@ -101,7 +101,7 @@ export default function Schedule() {
 
                             {/* Stasi Santo Carolus Boromeus Kima Atas */}
                             <div className="text-center">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4">Jadwal ST. Carolus Boromeus</h3>
+                                <h3 className="text-xl font-bold text-gray-800 mb-4">STASI ST. CAROLUS BOROMEUS</h3>
 
                                 <div className="bg-white/60 p-6 rounded-lg shadow-md">
                                     <div className="flex items-center justify-center mb-4">
