@@ -471,7 +471,7 @@ export default function History() {
 
                             {/* Pusat Paroki */}
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-blue-800 mb-4">Pusat Paroki (16 WR)</h3>
+                                <h3 className="text-xl font-bold text-blue-800 mb-4">Pusat Paroki</h3>
                                 <div className="space-y-3">
                                     {wilayahRohaniPusat.map((wr, index) => {
 
@@ -497,7 +497,7 @@ export default function History() {
 
                             {/* Stasi Santo Petrus Mapanget Barat */}
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-indigo-800 mb-4">Stasi Santo Petrus Mapanget Barat (3 WR)</h3>
+                                <h3 className="text-xl font-bold text-indigo-800 mb-4">Stasi Santo Petrus</h3>
                                 <div className="space-y-3">
                                     {wilayahRohaniMapanget.map((wr, index) => {
 
@@ -523,7 +523,7 @@ export default function History() {
 
                             {/* Stasi Santo Carolus Boromeus Kima Atas */}
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-cyan-800 mb-4">Stasi Santo Carolus Boromeus Kima Atas (2 WR)</h3>
+                                <h3 className="text-xl font-bold text-cyan-800 mb-4">Stasi Santo Carolus Boromeus</h3>
                                 <div className="space-y-3">
                                     {wilayahRohaniKima.map((wr, index) => {
                                         const stats = {
