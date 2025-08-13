@@ -5,6 +5,7 @@ import Footer from '../components/footer'
 import News from '../components/news'
 import Map from '../components/map'
 import Schedule from '../components/schedule'
+import Slider from '../components/slider'
 
 export default function Home() {
     return (
@@ -28,6 +29,10 @@ export default function Home() {
                
                 <div className='py-16 bg-blue-50 mb-16'>
                     <Map />
+                </div>
+
+                <div className='py-16 mb-16'>
+                    <Slider />
                 </div>
             </main>
 
