@@ -74,7 +74,7 @@ export default function History() {
         },
         {
             name: "WR Santa Maria Ratu Pencinta Damai",
-            image: "/wr/santa-maria-ratu-rosario.png"
+            image: "/wr/santa-maria-ratu-pencinta-damai.png"
         },
         {
             name: "WR Santa Verena",
