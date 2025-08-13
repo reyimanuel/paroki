@@ -14,8 +14,8 @@ export default function Navigation() {
             name: 'PROFIL',
             submenu: [
                 { name: 'Sejarah', href: 'history' },
-                { name: 'Visi & Misi', href: 'progress' },
-                { name: 'Struktur Organisasi', href: 'progress' }
+                { name: 'Visi', href: 'vision' },
+                { name: 'Statistik', href: 'progress' }
             ]
         },
         {
