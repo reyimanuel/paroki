@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { MapPin, Mail, Clock } from 'lucide-react'
 
 export default function Footer() {
     return (
@@ -19,10 +19,10 @@ export default function Footer() {
                                 <MapPin className="h-4 w-4 mr-2" />
                                 <span className="text-sm text-gray-300">Jl. Dahlia Raya III No.9, Paniki Bawah, Kec. Mapanget, Kota Manado, Sulawesi Utara</span>
                             </div>
-                            <div className="flex items-center">
+                            {/* <div className="flex items-center">
                                 <Phone className="h-4 w-4 mr-2" />
                                 <span className="text-sm text-gray-300">(031) 5343814</span>
-                            </div>
+                            </div> */}
                             <div className="flex items-center">
                                 <Mail className="h-4 w-4 mr-2" />
                                 <span className="text-sm text-gray-300">paroki.bundateresagpi@gmail.com</span>
@@ -61,7 +61,7 @@ export default function Footer() {
 
                 <div className="border-t border-gray-700 mt-8 pt-8 text-center">
                     <p className="text-gray-300">
-                        © 2025 Gereja Paroki Bunda Theresia Dari Calcutta
+                        © 2025 Gereja Paroki Bunda Teresa Dari Calcutta
                     </p>
                 </div>
             </div>

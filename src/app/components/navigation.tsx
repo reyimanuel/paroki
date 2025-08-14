@@ -62,7 +62,7 @@ export default function Navigation() {
                     <div key={item.name} className="relative group">
                         {item.submenu ? (
                             // Menu items with submenu - not clickable, only hoverable
-                            <div className="flex items-center text-gray-700 hover:text-blue-800 font-medium transition-colors cursor-default">
+                            <div className="flex items-center text-white hover:text-blue-100 font-medium transition-colors cursor-default">
                                 {item.name}
                                 <ChevronDown className="ml-1 h-4 w-4" />
                             </div>
@@ -70,7 +70,7 @@ export default function Navigation() {
                             // Menu items without submenu - clickable
                             <Link
                                 href={item.href}
-                                className="flex items-center text-gray-700 hover:text-blue-800 font-medium transition-colors"
+                                className="flex items-center text-white hover:text-blue-100 font-medium transition-colors"
                             >
                                 {item.name}
                             </Link>
@@ -83,7 +83,7 @@ export default function Navigation() {
                                         <Link
                                             key={subItem.name}
                                             href={subItem.href}
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                                            className="block px-4 py-2 text-sm text-white hover:bg-blue-50 hover:text-blue-100 transition-colors"
                                         >
                                             {subItem.name}
                                         </Link>
@@ -98,7 +98,7 @@ export default function Navigation() {
             {/* Mobile Navigation */}
             <div className="lg:hidden">
                 <div className="flex justify-between items-center py-4">
-                    <span className="text-gray-700 font-medium">Menu</span>
+                    <span className="text-white font-medium">Menu</span>
                     <button
                         className="p-2 hover:bg-gray-100 rounded-md transition-colors"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -115,7 +115,7 @@ export default function Navigation() {
                                     // Menu items with submenu - clickable to expand
                                     <div>
                                         <button
-                                            className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-blue-800 font-medium transition-colors"
+                                            className="flex items-center justify-between w-full py-2 text-white hover:text-blue-100 font-medium transition-colors"
                                             onClick={() => toggleSubmenu(item.name)}
                                         >
                                             <span>{item.name}</span>
@@ -130,7 +130,7 @@ export default function Navigation() {
                                                     <Link
                                                         key={subItem.name}
                                                         href={subItem.href}
-                                                        className="block py-2 px-3 text-sm text-gray-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
+                                                        className="block py-2 px-3 text-sm text-gray-600 hover:text-blue-100 hover:bg-blue-50 rounded transition-colors"
                                                         onClick={() => {
                                                             setIsMenuOpen(false)
                                                             setOpenSubmenu(null)
@@ -146,7 +146,7 @@ export default function Navigation() {
                                     // Menu items without submenu - clickable link
                                     <Link
                                         href={item.href}
-                                        className="block py-2 text-gray-700 hover:text-blue-800 font-medium transition-colors"
+                                        className="block py-2 text-white hover:text-blue-100 font-medium transition-colors"
                                         onClick={() => {
                                             setIsMenuOpen(false)
                                             setOpenSubmenu(null)

@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Youtube, Facebook } from "lucide-react"
 
 export default function Slider() {
     const slides = [
@@ -13,18 +12,38 @@ export default function Slider() {
             description: "Kunjungi Channel Youtube Kami!",
             platform: "youtube",
             link: "https://www.youtube.com/@komsosparokigpi",
-            icon: <Youtube className="w-6 h-6" />,
+            icon: "/youtube.svg",
             platformName: "YouTube",
         },
         {
             id: 2,
             image: "/facebook.jpg",
-            title: "Kegiatan Komunitas",
+            title: "Profil Facebook Kami",
             description: "Kunjungi Profil Facebook Kami!",
             platform: "facebook",
             link: "https://www.facebook.com/share/19Qw3nuq7z/",
-            icon: <Facebook className="w-6 h-6" />,
+            icon: "/facebook.svg",
             platformName: "Facebook",
+        },
+        {
+            id: 3,
+            image: "/instagram.jpg",
+            title: "Profil Instagram Kami",
+            description: "Kunjungi Profil Instagram Kami!",
+            platform: "instagram",
+            link: "https://www.instagram.com/komsosparokigpi?igsh=MWFpY2xlMmYzcXoxYQ==",
+            icon: "/instagram.svg",
+            platformName: "Instagram",
+        },
+        {
+            id: 4,
+            image: "/tiktok.jpg",
+            title: "Profil Tiktok kami",
+            description: "Kunjungi Profil TikTok Kami!",
+            platform: "tiktok",
+            link: "https://www.tiktok.com/@komsos_btdc_gpi?_t=ZS-8yrh5GI3p6D&_r=1",
+            icon: "/tiktok.svg",
+            platformName: "TikTok",
         },
     ]
 
@@ -39,51 +58,26 @@ export default function Slider() {
                 <div className="relative rounded-2xl p-8 overflow-hidden">
 
                     {/* Infinite Scrolling Container */}
-                    <div className="relative h-56 overflow-hidden">
-                        <div className="flex animate-scroll-left space-x-50 absolute top-0 left-0 h-full">
+                    <div className="relative h-30 overflow-hidden">
+                        <div className="flex animate-scroll-left space-x-30 absolute top-0 left-0 h-full">
                             {infiniteSlides.map((slide, index) => (
-                                <div
+                                <Link
+                                    href={slide.link}
                                     key={`${slide.id}-${index}`}
-                                    className="flex-shrink-0 w-56 h-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                                    className="flex-shrink-0 w-56 h-full hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-center"
                                 >
-                                    {/* Image */}
-                                    <div className="relative h-28 w-full">
-                                        <Image src={slide.image || "/placeholder.svg"} alt={slide.title} fill className="object-cover" />
-                                        {/* Overlay */}
-                                        <div className="absolute inset-0 bg-black/30"></div>
-
-                                        {/* Platform Badge */}
-                                        <div
-                                            className={`absolute top-2 right-2 px-2 py-0.5 rounded-full text-white text-xs font-medium ${slide.platform === "youtube" ? "bg-red-600" : "bg-blue-600"
-                                                }`}
-                                        >
-                                            <div className="flex items-center gap-1">
-                                                {slide.icon}
-                                                <span>{slide.platformName}</span>
-                                            </div>
-                                        </div>
+                                    {/* Icon centered and fitted */}
+                                    <div className="flex items-center justify-center w-full h-32">
+                                        <Image
+                                            src={slide.icon || "/placeholder.svg"}
+                                            alt={slide.title}
+                                            width={64}
+                                            height={64}
+                                            className="object-contain"
+                                        />
                                     </div>
-
-                                    {/* Content */}
-                                    <div className="p-3">
-                                        <h4 className="text-base font-bold text-gray-800 mb-1">{slide.title}</h4>
-                                        <p className="text-gray-600 text-xs mb-2 line-clamp-2">{slide.description}</p>
-
-                                        {/* CTA Button */}
-                                        <Link
-                                            href={slide.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={`inline-flex items-center gap-1 px-2 py-1 rounded-lg font-medium text-xs transition-all duration-300 transform hover:scale-105 ${slide.platform === "youtube"
-                                                    ? "bg-red-600 hover:bg-red-700 text-white"
-                                                    : "bg-blue-600 hover:bg-blue-700 text-white"
-                                                }`}
-                                        >
-                                            {slide.icon}
-                                            <span>Kunjungi</span>
-                                        </Link>
-                                    </div>
-                                </div>
+                                    {/* Overlay */}
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -94,23 +88,35 @@ export default function Slider() {
                 </div>
 
                 {/* Social Media Links Row */}
-                <div className="flex justify-center gap-6 mt-8">
+                {/* <div className="flex justify-center gap-6 mt-8">
                     {slides.map((slide) => (
                         <Link
                             key={slide.platform}
                             href={slide.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex items-center gap-3 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md ${
-                                slide.platform === "youtube"
+                            className={`flex items-center gap-3 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md ${slide.platform === "youtube"
                                     ? "bg-red-600 hover:bg-red-700 text-white"
-                                    : "bg-blue-600 hover:bg-blue-700 text-white"
-                            }`}
+                                    : slide.platform === "facebook"
+                                        ? "bg-blue-800 hover:bg-blue-900 text-white"
+                                        : slide.platform === "instagram"
+                                            ? "bg-pink-500 hover:bg-pink-600 text-white"
+                                            : slide.platform === "tiktok"
+                                                ? "bg-black hover:bg-gray-800 text-white"
+                                                : "bg-gray-400 text-white"
+                                }`}
                         >
-                            {slide.icon}
+                            <Image
+                                src={slide.icon}
+                                alt={slide.platformName}
+                                width={24}
+                                height={24}
+                                className="filter invert brightness-0 saturate-0"
+                            />
+                            <span className="text-sm font-medium">{slide.platformName}</span>
                         </Link>
                     ))}
-                </div>
+                </div> */}
             </div>
 
             {/* Custom CSS for infinite scroll animation */}
