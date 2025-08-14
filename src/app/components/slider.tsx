@@ -12,7 +12,7 @@ export default function Slider() {
             title: "Channel Youtube Kami",
             description: "Kunjungi Channel Youtube Kami!",
             platform: "youtube",
-            link: "https://www.youtube.com/@ParokiBTDCGPI",
+            link: "https://www.youtube.com/@komsosparokigpi",
             icon: <Youtube className="w-6 h-6" />,
             platformName: "YouTube",
         },
@@ -32,35 +32,29 @@ export default function Slider() {
     const infiniteSlides = [...slides, ...slides, ...slides]
 
     return (
-        <section className="py-16">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-4">Ikuti Kami di Media Sosial</h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        Tetap terhubung dengan kegiatan paroki melalui platform media sosial kami
-                    </p>
-                </div>
+        <section className="py-16" id="slider">
+            <div className="container px-4">
 
                 {/* Slider Container */}
-                <div className="relative bg-gray-200 rounded-2xl p-8 overflow-hidden">
+                <div className="relative rounded-2xl p-8 overflow-hidden">
 
                     {/* Infinite Scrolling Container */}
-                    <div className="relative h-80 overflow-hidden">
-                        <div className="flex animate-scroll-left space-x-40 absolute top-0 left-0 h-full">
+                    <div className="relative h-56 overflow-hidden">
+                        <div className="flex animate-scroll-left space-x-50 absolute top-0 left-0 h-full">
                             {infiniteSlides.map((slide, index) => (
                                 <div
                                     key={`${slide.id}-${index}`}
-                                    className="flex-shrink-0 w-80 h-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                                    className="flex-shrink-0 w-56 h-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                                 >
                                     {/* Image */}
-                                    <div className="relative h-48 w-full">
+                                    <div className="relative h-28 w-full">
                                         <Image src={slide.image || "/placeholder.svg"} alt={slide.title} fill className="object-cover" />
                                         {/* Overlay */}
                                         <div className="absolute inset-0 bg-black/30"></div>
 
                                         {/* Platform Badge */}
                                         <div
-                                            className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium ${slide.platform === "youtube" ? "bg-red-600" : "bg-blue-600"
+                                            className={`absolute top-2 right-2 px-2 py-0.5 rounded-full text-white text-xs font-medium ${slide.platform === "youtube" ? "bg-red-600" : "bg-blue-600"
                                                 }`}
                                         >
                                             <div className="flex items-center gap-1">
@@ -71,16 +65,16 @@ export default function Slider() {
                                     </div>
 
                                     {/* Content */}
-                                    <div className="p-6">
-                                        <h4 className="text-lg font-bold text-gray-800 mb-2">{slide.title}</h4>
-                                        <p className="text-gray-600 text-sm mb-4 line-clamp-2">{slide.description}</p>
+                                    <div className="p-3">
+                                        <h4 className="text-base font-bold text-gray-800 mb-1">{slide.title}</h4>
+                                        <p className="text-gray-600 text-xs mb-2 line-clamp-2">{slide.description}</p>
 
                                         {/* CTA Button */}
                                         <Link
                                             href={slide.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 transform hover:scale-105 ${slide.platform === "youtube"
+                                            className={`inline-flex items-center gap-1 px-2 py-1 rounded-lg font-medium text-xs transition-all duration-300 transform hover:scale-105 ${slide.platform === "youtube"
                                                     ? "bg-red-600 hover:bg-red-700 text-white"
                                                     : "bg-blue-600 hover:bg-blue-700 text-white"
                                                 }`}
@@ -101,25 +95,21 @@ export default function Slider() {
 
                 {/* Social Media Links Row */}
                 <div className="flex justify-center gap-6 mt-8">
-                    <Link
-                        href="https://www.youtube.com/@ParokiBTDCGPI"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md"
-                    >
-                        <Youtube className="w-5 h-5" />
-                        <span className="font-medium">YouTube</span>
-                    </Link>
-
-                    <Link
-                        href="https://www.facebook.com/ParokiBTDCGPI"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md"
-                    >
-                        <Facebook className="w-5 h-5" />
-                        <span className="font-medium">Facebook</span>
-                    </Link>
+                    {slides.map((slide) => (
+                        <Link
+                            key={slide.platform}
+                            href={slide.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`flex items-center gap-3 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md ${
+                                slide.platform === "youtube"
+                                    ? "bg-red-600 hover:bg-red-700 text-white"
+                                    : "bg-blue-600 hover:bg-blue-700 text-white"
+                            }`}
+                        >
+                            {slide.icon}
+                        </Link>
+                    ))}
                 </div>
             </div>
 

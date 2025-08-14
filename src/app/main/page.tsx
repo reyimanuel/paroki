@@ -27,11 +27,11 @@ export default function Home() {
                     <News />
                 </div>
                
-                <div className='py-16 bg-blue-50 mb-16'>
+                <div className='py-16 bg-blue-50'>
                     <Map />
                 </div>
 
-                <div className='py-16 mb-16'>
+                <div className='py-5'>
                     <Slider />
                 </div>
             </main>

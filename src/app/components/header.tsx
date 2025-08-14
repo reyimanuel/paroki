@@ -10,9 +10,9 @@ export default function Header() {
                         <Image
                             src="/logo.png"
                             alt="Logo Pastoral"
-                            width={100}
-                            height={100}
-                            className="aspect-square object-cover"
+                            width={150}
+                            height={150}
+                            className="aspect-square"
                             sizes="(max-width: 768px) 50vw, 150px"
                         />
 
