@@ -31,7 +31,7 @@ export default function Home() {
                     <Map />
                 </div>
 
-                <div className='py-5'>
+                <div className='py-5 mt-12'>
                     <Slider />
                 </div>
             </main>

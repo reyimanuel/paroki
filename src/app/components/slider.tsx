@@ -51,7 +51,7 @@ export default function Slider() {
     const infiniteSlides = [...slides, ...slides, ...slides]
 
     return (
-        <section className="py-16" id="slider">
+        <section id="slider">
             <div className="container px-4">
 
                 {/* Slider Container */}

@@ -83,7 +83,7 @@ export default function Navigation() {
                                         <Link
                                             key={subItem.name}
                                             href={subItem.href}
-                                            className="block px-4 py-2 text-sm text-white hover:bg-blue-50 hover:text-blue-100 transition-colors"
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                                         >
                                             {subItem.name}
                                         </Link>
@@ -130,7 +130,7 @@ export default function Navigation() {
                                                     <Link
                                                         key={subItem.name}
                                                         href={subItem.href}
-                                                        className="block py-2 px-3 text-sm text-gray-600 hover:text-blue-100 hover:bg-blue-50 rounded transition-colors"
+                                                        className="block py-2 px-3 text-sm text-white hover:text-blue-100 hover:bg-blue-50 rounded transition-colors"
                                                         onClick={() => {
                                                             setIsMenuOpen(false)
                                                             setOpenSubmenu(null)
