@@ -15,7 +15,7 @@ export default function Navigation() {
             submenu: [
                 { name: 'Sejarah', href: 'history' },
                 { name: 'Visi', href: 'vision' },
-                { name: 'Statistik', href: 'progress' }
+                { name: 'Statistik', href: 'statistic' }
             ]
         },
         {
