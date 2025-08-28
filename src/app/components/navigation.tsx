@@ -44,6 +44,7 @@ export default function Navigation() {
         {
             name: 'DOKUMEN',
             submenu: [
+                { name: 'Formulir', href: 'form' },
                 { name: 'Surat Pastoral', href: 'progress' },
                 { name: 'Peraturan', href: 'progress' }
             ]
